@@ -8,6 +8,38 @@ html {
   scrollbar-width: none;
 }
 
+#top-bar {
+    position: fixed;
+    opacity: 0.25;
+    top: 88%;
+    left: 40%;
+    width: 20%;
+    height: 75px;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    mix-blend-mode: exclusion;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+#top-bar.hidden {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+#top-bar img {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;           /* let width auto-adjust */
+    height: 40px;          /* fixed height for consistency */
+}
+
 #custom-cursor {
     position: fixed;
     transform: translate(-50%, -50%);
