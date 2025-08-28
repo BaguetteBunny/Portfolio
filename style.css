@@ -1,6 +1,17 @@
 @font-face { font-family: pixel; src: url('font/monogram.ttf');}
 @font-face { font-family: heroeau; src: url('font/HEROEAU.otf');}
 
+* {
+    cursor: none;
+}
+#custom-cursor {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: exclusion;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -60,6 +71,7 @@ body {
     font-family: heroeau;
     font-size: 200px;
     z-index: 2;
+    text-shadow: 0 0 200px #fff;
 }
 
 #main-subtext {
