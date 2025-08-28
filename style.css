@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2d2d2d;
+}
+
+#main-bg-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#main-bg-static {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  object-fit: cover;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#main-bg-image-blur {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%) rotate(0deg) scale(4.5);
+  transition-timing-function: ease-in-out;
+  transform-origin: center center;
+  width: 100%;
+  height: auto;
+  filter: blur(2px);
+  mix-blend-mode: darken;
+  opacity: 0.25;
+  pointer-events: none;
+}
