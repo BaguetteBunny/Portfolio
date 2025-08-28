@@ -1,3 +1,4 @@
+TITLES_ARRAY = "Creative Technologist"
 
 document.addEventListener('mousemove', function(e) {
     let main_rotation = document.getElementById('main-bg-image-blur');

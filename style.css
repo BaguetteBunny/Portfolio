@@ -31,13 +31,14 @@ body {
   object-fit: cover;
   opacity: 0.5;
   pointer-events: none;
+  z-index: -1;
 }
 
 #main-bg-image-blur {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 0%) rotate(0deg) scale(4.5);
+  transform: translate(-50%, 0%) rotate(45deg) scale(4.5);
   transition-timing-function: ease-in-out;
   transform-origin: center center;
   width: 100%;
@@ -46,4 +47,26 @@ body {
   mix-blend-mode: darken;
   opacity: 0.25;
   pointer-events: none;
+  z-index: 1;
+}
+
+#main-text {
+    position: relative;
+    margin: 0;
+    margin-top: -20%;
+    color: white;
+    font-family: heroeau;
+    font-size: 200px;
+    z-index: 2;
+}
+
+#main-subtext {
+    position: relative;
+    letter-spacing: 10px;
+    left: 10%;
+    margin-top: -8%;
+    color: white;
+    font-family: pixel;
+    font-size: 50px;
+    z-index: 2;
 }
