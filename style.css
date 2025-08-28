@@ -4,6 +4,10 @@
 * {
     cursor: none;
 }
+html {
+  scrollbar-width: none;
+}
+
 #custom-cursor {
     position: fixed;
     transform: translate(-50%, -50%);
@@ -20,6 +24,7 @@ body {
     align-items: center;
     background-color: #202020;
     overflow-x: hidden;
+    scrollbar-width: none;
 }
 
 #main-bg-wrapper {
