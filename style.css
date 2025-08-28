@@ -40,6 +40,13 @@ html {
     height: 40px;          /* fixed height for consistency */
 }
 
+#click-effect {
+    position: absolute;
+    transform: rotate(0deg);
+    opacity: 0.5;
+    mix-blend-mode: exclusion;
+}
+
 #custom-cursor {
     position: fixed;
     transform: translate(-50%, -50%);
