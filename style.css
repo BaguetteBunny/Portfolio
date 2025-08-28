@@ -8,6 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #2d2d2d;
+    overflow-x: none;
 }
 
 #main-bg-wrapper {
@@ -18,6 +19,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
 #main-bg-static {
