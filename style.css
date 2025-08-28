@@ -18,8 +18,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2d2d2d;
-    overflow-x: none;
+    background-color: #202020;
+    overflow-x: hidden;
 }
 
 #main-bg-wrapper {
@@ -83,4 +83,14 @@ body {
     font-family: pixel;
     font-size: 50px;
     z-index: 2;
+}
+
+#info-bg-wrapper {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    transform: translate(-50%, 33%);
+    z-index: -1;
+    background-color: rgb(22, 22, 22);
 }
