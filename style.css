@@ -64,6 +64,7 @@ body {
     background-color: #202020;
     overflow-x: hidden;
     scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 #main-bg-wrapper {
