@@ -2,7 +2,6 @@ let currentX = 0;
 let currentY = 0;
 let movedX = 0;
 let movedY = 0;
-let isPlaying = false;
 let lastScrollY = document.scrollY;
 
 const customCursor = document.getElementById('custom-cursor');
@@ -35,22 +34,6 @@ document.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
-document.addEventListener("click", () => {
-    if (isPlaying) return;
-
-    isPlaying = true;
-    let randomNumber = Math.random()*360;
-    const src = clickGif.getAttribute("data-gif");
-    clickGif.style.left = `${movedX-128}px`;
-    clickGif.style.top = `${movedY-128}px`;
-    clickGif.style.transform = `rotate(${randomNumber}deg)`
-    clickGif.src = src;
-
-    setTimeout(() => {
-        clickGif.src = "assets/empty.png";
-        isPlaying = false;
-    }, 900);
-});
 
 function animateCursor() {
     if (!customCursor) return;
