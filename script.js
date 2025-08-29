@@ -35,21 +35,22 @@ document.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
-topBar.addEventListener("mouseenter", () => {
-    customCursor.style.opacity = "0";
-    setTimeout(() => {
-        customCursor.src = "assets/cursor_circle.png"; 
-        customCursor.style.opacity = "1";
-    }, 150);
-});
-
-topBar.addEventListener("mouseleave", () => {
-    customCursor.style.opacity = "0"; 
-    setTimeout(() => {
-        customCursor.src = "assets/cursor.png"; 
-        customCursor.style.opacity = "1";
-    }, 150);
-});
+function changeCursorImage(element_on_hover, new_image) {
+    element_on_hover.addEventListener("mouseenter", () => {
+        customCursor.style.opacity = "0";
+        setTimeout(() => {
+            customCursor.src = new_image; 
+            customCursor.style.opacity = "1";
+        }, 150);
+    });
+    element_on_hover.addEventListener("mouseleave", () => {
+        customCursor.style.opacity = "0";
+        setTimeout(() => {
+            customCursor.src = "assets/cursor.png"; 
+            customCursor.style.opacity = "1";
+        }, 150);
+    });
+}
 
 function animateCursor() {
     if (!customCursor) return;
@@ -63,3 +64,4 @@ function animateCursor() {
 }
 
 animateCursor();
+changeCursorImage(topBar, "assets/cursor_circle.png");
