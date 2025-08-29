@@ -132,3 +132,44 @@ body {
     z-index: -1;
     background-color: rgb(22, 22, 22);
 }
+
+#info-about-me-container {
+    position: relative;
+    width: 60%;
+    height: 45%;
+    left: 35%;
+    transform: translate(-50%, 33%);
+    z-index: 1;
+    background-color: rgb(41, 41, 41);
+    border: 2px solid rgb(41, 41, 41);
+    border-radius: 20px;
+}
+
+#info-technologies-container {
+    position: relative;
+    width: 60%;
+    height: 10%;
+    left: 35%;
+    top: 20%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    background-color: rgb(35, 35, 35);
+    border: 2px solid rgb(35, 35, 35);
+    border-radius: 20px;
+}
+
+#info-x-container {
+    position: relative;
+    width: 15%;
+    height: 66%;
+    left: 75%;
+    top: -74%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    background-color: rgb(255, 0, 0);
+    border: 2px solid rgb(41, 41, 41);
+    border-radius: 20px;
+}
+
+
+
