@@ -3,16 +3,21 @@ let currentY = 0;
 let movedX = 0;
 let movedY = 0;
 let lastScrollY = document.scrollY;
+let startTime = null;
 
 const customCursor = document.getElementById('custom-cursor');
 const mainText = document.getElementById("main-text");
 const mainSubtext = document.getElementById("main-subtext");
+const mainDesc = document.getElementById("main-description");
 const pfpWrapper = document.getElementById("info-pfp-wrapper");
 const pfp = document.getElementById("info-pfp");
 const topBar = document.getElementById("top-bar");
 const mainRotator = document.getElementById('main-bg-image-blur');
 const clickGif = document.getElementById("click-effect");
+
 const delayFactor = 0.15;
+const amplitude = 5;
+const period = 3000;
 
 document.addEventListener('mousemove', function(e) {
     let currentRotate = mainRotator.dataset.rotate ? parseFloat(mainRotator.dataset.rotate) : 0;
@@ -66,14 +71,18 @@ function animateCursor() {
     requestAnimationFrame(animateCursor);
 }
 
+
 animateCursor();
 cursorChangeImage(topBar, "assets/cursor_circle.png");
 cursorChangeImage(mainText, "assets/cursor_circle_blue.png");
 cursorChangeImage(mainSubtext, "assets/cursor_circle_red.png");
+cursorChangeImage(mainDesc, "assets/cursor_circle_red.png");
+cursorChangeImage(pfpWrapper, "assets/cursor_circle_blue.png");
 
 pfpWrapper.addEventListener("mouseenter", () => {
     pfp.style.opacity = "0";
     setTimeout(() => {
+        customCursor.style.opacity = "1";
         pfp.src = "assets/pfp_silly.png"; 
         pfp.style.opacity = "1";
         pfp.style.transform = `rotate(0deg)`;
@@ -82,6 +91,7 @@ pfpWrapper.addEventListener("mouseenter", () => {
 pfpWrapper.addEventListener("mouseleave", () => {
     pfp.style.opacity = "0";
     setTimeout(() => {
+        customCursor.style.opacity = "1";
         pfp.src = "assets/pfp.jpg"; 
         pfp.style.opacity = "1";
         pfp.style.transform = `rotate(60deg)`;
