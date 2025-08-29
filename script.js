@@ -7,6 +7,8 @@ let lastScrollY = document.scrollY;
 const customCursor = document.getElementById('custom-cursor');
 const mainText = document.getElementById("main-text");
 const mainSubtext = document.getElementById("main-subtext");
+const pfpWrapper = document.getElementById("info-pfp-wrapper");
+const pfp = document.getElementById("info-pfp");
 const topBar = document.getElementById("top-bar");
 const mainRotator = document.getElementById('main-bg-image-blur');
 const clickGif = document.getElementById("click-effect");
@@ -36,19 +38,19 @@ document.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
-function changeCursorImage(elementOnHover, newImage) {
+function cursorChangeImage(elementOnHover, newImage, oldImage = "assets/cursor.png") {
     elementOnHover.addEventListener("mouseenter", () => {
-        customCursor.style.opacity = "0";
+        element.style.opacity = "0";
         setTimeout(() => {
-            customCursor.src = newImage; 
-            customCursor.style.opacity = "1";
+            element.src = newImage; 
+            element.style.opacity = "1";
         }, 150);
     });
     elementOnHover.addEventListener("mouseleave", () => {
-        customCursor.style.opacity = "0";
+        element.style.opacity = "0";
         setTimeout(() => {
-            customCursor.src = "assets/cursor.png"; 
-            customCursor.style.opacity = "1";
+            element.src = oldImage; 
+            element.style.opacity = "1";
         }, 150);
     });
 }
@@ -65,6 +67,23 @@ function animateCursor() {
 }
 
 animateCursor();
-changeCursorImage(topBar, "assets/cursor_circle.png");
-changeCursorImage(mainText, "assets/cursor_circle_blue.png");
-changeCursorImage(mainSubtext, "assets/cursor_circle_red.png");
+cursorChangeImage(topBar, "assets/cursor_circle.png");
+cursorChangeImage(mainText, "assets/cursor_circle_blue.png");
+cursorChangeImage(mainSubtext, "assets/cursor_circle_red.png");
+
+pfpWrapper.addEventListener("mouseenter", () => {
+    pfp.style.opacity = "0";
+    setTimeout(() => {
+        pfp.src = "assets/pfp_silly.png"; 
+        pfp.style.opacity = "1";
+        pfp.style.transform = `rotate(0deg)`;
+    }, 150);
+});
+pfpWrapper.addEventListener("mouseleave", () => {
+    pfp.style.opacity = "0";
+    setTimeout(() => {
+        pfp.src = "assets/pfp.jpg"; 
+        pfp.style.opacity = "1";
+        pfp.style.transform = `rotate(60deg)`;
+    }, 150);
+});
