@@ -5,7 +5,8 @@ let movedY = 0;
 let lastScrollY = document.scrollY;
 
 const customCursor = document.getElementById('custom-cursor');
-//const hoverTarget = document.querySelector(".topbar");
+const mainText = document.getElementById("main-text");
+const mainSubtext = document.getElementById("main-subtext");
 const topBar = document.getElementById("top-bar");
 const mainRotator = document.getElementById('main-bg-image-blur');
 const clickGif = document.getElementById("click-effect");
@@ -35,15 +36,15 @@ document.addEventListener("scroll", () => {
     lastScrollY = currentScrollY;
 });
 
-function changeCursorImage(element_on_hover, new_image) {
-    element_on_hover.addEventListener("mouseenter", () => {
+function changeCursorImage(elementOnHover, newImage) {
+    elementOnHover.addEventListener("mouseenter", () => {
         customCursor.style.opacity = "0";
         setTimeout(() => {
-            customCursor.src = new_image; 
+            customCursor.src = newImage; 
             customCursor.style.opacity = "1";
         }, 150);
     });
-    element_on_hover.addEventListener("mouseleave", () => {
+    elementOnHover.addEventListener("mouseleave", () => {
         customCursor.style.opacity = "0";
         setTimeout(() => {
             customCursor.src = "assets/cursor.png"; 
@@ -65,3 +66,5 @@ function animateCursor() {
 
 animateCursor();
 changeCursorImage(topBar, "assets/cursor_circle.png");
+changeCursorImage(mainText, "assets/cursor_circle_blue.png");
+changeCursorImage(mainSubtext, "assets/cursor_circle_red.png");
