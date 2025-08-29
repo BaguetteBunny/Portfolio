@@ -9,7 +9,7 @@ const customCursor = document.getElementById('custom-cursor');
 const topBar = document.getElementById("top-bar");
 const mainRotator = document.getElementById('main-bg-image-blur');
 const clickGif = document.getElementById("click-effect");
-const delayFactor = 0.1;
+const delayFactor = 0.15;
 
 document.addEventListener('mousemove', function(e) {
     let currentRotate = mainRotator.dataset.rotate ? parseFloat(mainRotator.dataset.rotate) : 0;
