@@ -40,17 +40,17 @@ document.addEventListener("scroll", () => {
 
 function cursorChangeImage(elementOnHover, newImage, oldImage = "assets/cursor.png") {
     elementOnHover.addEventListener("mouseenter", () => {
-        element.style.opacity = "0";
+        customCursor.style.opacity = "0";
         setTimeout(() => {
-            element.src = newImage; 
-            element.style.opacity = "1";
+            customCursor.src = newImage; 
+            customCursor.style.opacity = "1";
         }, 150);
     });
     elementOnHover.addEventListener("mouseleave", () => {
-        element.style.opacity = "0";
+        customCursor.style.opacity = "0";
         setTimeout(() => {
-            element.src = oldImage; 
-            element.style.opacity = "1";
+            customCursor.src = oldImage; 
+            customCursor.style.opacity = "1";
         }, 150);
     });
 }
