@@ -106,9 +106,11 @@ container.querySelectorAll("img").forEach(img => {
   });
 
   img.addEventListener("mousemove", (e) => {
-    tooltip.style.left = e.clientX - 30 + "px";
-    tooltip.style.top = e.clientY + 0 + "px";
+    tooltip.style.top = e.clientY - 20 + "px";
+    const rect = tooltip.getBoundingClientRect();
+    tooltip.style.left = (e.clientX - rect.width / 2) + "px";
   });
+
 
   img.addEventListener("mouseleave", () => {
     tooltip.style.opacity = "0";
