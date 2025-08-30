@@ -177,65 +177,6 @@ body {
     white-space: pre-line;
 }
 
-#info-status {
-    position: relative;
-    top: -168%;
-    left: 12.9%;
-    width: 100%; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 1px;
-    color: rgb(255, 163, 163);
-    font-family: pixel;
-    font-size: 24px;
-    white-space: pre-line;
-}
-
-#info-email {
-    position: relative;
-    top: -172%;
-    left: 6.9%;
-    width: 100%; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    letter-spacing: 1px;
-    color: rgb(255, 163, 163);
-    font-family: pixel;
-    font-size: 24px;
-    white-space: pre-line;
-}
-
-#info-technologies-container {
-    position: relative;
-    width: 60%;
-    height: 10%;
-    left: 35%;
-    top: 24%;
-    transform: translate(-50%, 50%);
-    z-index: 1;
-    background-color: rgb(35, 35, 35);
-    border: 2px solid rgb(35, 35, 35);
-    border-radius: 20px;
-    animation: appear ease-in-out;
-}
-
-#info-x-container {
-    position: relative;
-    width: 15%;
-    height: 66%;
-    left: 75%;
-    top: -70%;
-    transform: translate(-50%, 50%);
-    z-index: 1;
-    background-color: rgb(255, 0, 0);
-    border: 2px solid rgb(41, 41, 41);
-    border-radius: 20px;
-    animation: appear ease-in-out, appear-x ease-in-out;
-    animation-timeline: view();
-}
-
 #info-pfp-wrapper {
     position: relative;
     width: 270px; 
@@ -296,6 +237,123 @@ body {
     object-fit: cover;
     opacity: 1;
     transition: opacity 0.3s ease;
+}
+
+#info-status {
+    position: relative;
+    top: -168%;
+    left: 12.9%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: rgb(255, 163, 163);
+    font-family: pixel;
+    font-size: 24px;
+    white-space: pre-line;
+}
+
+#info-email {
+    position: relative;
+    top: -172%;
+    left: 6.9%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    color: rgb(255, 163, 163);
+    font-family: pixel;
+    font-size: 24px;
+    white-space: pre-line;
+}
+
+#info-technologies-container {
+    position: relative;
+    width: 60%;
+    height: 10%;
+    left: 35%;
+    top: 22.5%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    background-color: rgb(35, 35, 35);
+    border: 2px solid rgb(35, 35, 35);
+    border-radius: 20px;
+    animation: appear ease-in-out;
+}
+
+#info-technologies-container.tech-row {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 12px 0;
+    user-select: none;
+}
+
+.tech-item {
+    width: 64px;
+    height: 64px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 260ms cubic-bezier(.2,.9,.2,1), filter 260ms cubic-bezier(.2,.9,.2,1);
+    transform-origin: center center;
+    filter: grayscale(100%) contrast(0.9) brightness(0.95);
+    background: transparent;
+}
+
+.tech-item img {
+    width: 72%;
+    height: auto;
+    display: block;
+    pointer-events: auto;
+    
+}
+
+.tech-item:hover,
+.tech-item:focus-visible {
+    transform: scale(1.12);
+    filter: grayscale(0%) contrast(1) brightness(1);
+    transition: transform 220ms cubic-bezier(.2,.9,.2,1), filter 220ms cubic-bezier(.2,.9,.2,1);
+    outline: none;
+}
+
+.tech-item:focus-visible {
+    box-shadow: 0 0 0 4px rgba(0,125,255,0.12), 0 0 0 1px rgba(0,125,255,0.16) inset;
+    border-radius: 12px;
+}
+
+#info-tooltip {
+    position:absolute;
+    color: white;
+    font-family: pixel;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 6px;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 1000;
+}
+
+#info-x-container {
+    position: relative;
+    width: 15%;
+    height: 66%;
+    left: 75%;
+    top: -70%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    background-color: rgb(255, 0, 0);
+    border: 2px solid rgb(41, 41, 41);
+    border-radius: 20px;
+    animation: appear ease-in-out, appear-x ease-in-out;
+    animation-timeline: view();
 }
 
 #info-seperator {
@@ -365,4 +423,3 @@ body {
   50%  { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
-

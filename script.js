@@ -14,6 +14,8 @@ const pfp = document.getElementById("info-pfp");
 const topBar = document.getElementById("top-bar");
 const mainRotator = document.getElementById('main-bg-image-blur');
 const clickGif = document.getElementById("click-effect");
+const container = document.getElementById("info-technologies-container");
+const tooltip = document.getElementById("info-tooltip");
 
 const delayFactor = 0.15;
 const amplitude = 5;
@@ -71,7 +73,6 @@ function animateCursor() {
     requestAnimationFrame(animateCursor);
 }
 
-
 animateCursor();
 cursorChangeImage(topBar, "assets/cursor_circle.png");
 cursorChangeImage(mainText, "assets/cursor_circle_blue.png");
@@ -96,4 +97,20 @@ pfpWrapper.addEventListener("mouseleave", () => {
         pfp.style.opacity = "1";
         pfp.style.transform = `rotate(60deg)`;
     }, 150);
+});
+
+container.querySelectorAll("img").forEach(img => {
+  img.addEventListener("mouseenter", () => {
+    tooltip.textContent = img.alt;
+    tooltip.style.opacity = "1";
+  });
+
+  img.addEventListener("mousemove", (e) => {
+    tooltip.style.left = e.clientX - 30 + "px";
+    tooltip.style.top = e.clientY + 0 + "px";
+  });
+
+  img.addEventListener("mouseleave", () => {
+    tooltip.style.opacity = "0";
+  });
 });
