@@ -137,14 +137,40 @@ body {
     animation: wobble 3s ease-in-out infinite;
 }
 
-#info-bg-wrapper {
+#info-wrapper {
     position: absolute;
     width: 100vw;
     height: 100vh;
     left: 50%;
     transform: translate(-50%, 33%);
-    z-index: -1;
+    z-index: -2;
     background-color: rgb(22, 22, 22);
+}
+
+#info-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+    grid-gap: 7px;
+    margin-top: 10px;
+    overflow-y: hidden;
+}
+
+.info-bg-squares {
+    background-color: rgb(27, 27, 27);
+    z-index: 0;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.info-bg-squares.square-hover {
+    transform: scale(0.8);
+    background-color: rgb(50, 50, 50);
 }
 
 #info-about-me-container {
@@ -160,6 +186,7 @@ body {
     border-radius: 20px;
     animation: appear ease-in-out, appear-about-me ease-in-out;
     animation-timeline: view();
+    pointer-events: none;
 }
 
 #info-about-me {
@@ -175,6 +202,7 @@ body {
     font-family: pixel;
     font-size: 25px;
     white-space: pre-line;
+    pointer-events: auto;
 }
 
 #info-pfp-wrapper {
@@ -184,6 +212,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: auto;
 }
 
 #info-rotating-dots {
@@ -252,6 +281,7 @@ body {
     font-family: pixel;
     font-size: 24px;
     white-space: pre-line;
+    pointer-events: auto;
 }
 
 #info-email {
@@ -267,6 +297,7 @@ body {
     font-family: pixel;
     font-size: 24px;
     white-space: pre-line;
+    pointer-events: auto;
 }
 
 #info-technologies-container {
@@ -281,6 +312,7 @@ body {
     border: 2px solid rgb(35, 35, 35);
     border-radius: 20px;
     animation: appear ease-in-out;
+    pointer-events: none;
 }
 
 #info-technologies-container.tech-row {
@@ -302,8 +334,9 @@ body {
     overflow: hidden;
     transition: transform 260ms cubic-bezier(.2,.9,.2,1), filter 260ms cubic-bezier(.2,.9,.2,1);
     transform-origin: center center;
-    filter: grayscale(100%) contrast(0.9) brightness(0.95);
+    filter: grayscale(75%) contrast(0.9) brightness(0.95);
     background: transparent;
+    pointer-events: auto;
 }
 
 .tech-item img {
@@ -339,6 +372,7 @@ body {
     transform: translateY(50px);
     transition: opacity 0.15s ease, transform 0.15s ease;
     z-index: 1000;
+    pointer-events: none;
 }
 
 #info-x-container {
@@ -354,6 +388,7 @@ body {
     border-radius: 20px;
     animation: appear ease-in-out, appear-x ease-in-out;
     animation-timeline: view();
+    pointer-events: none;
 }
 
 #info-seperator {
@@ -369,6 +404,7 @@ body {
     border-radius: 20px;
     animation: appear ease-in-out ;
     animation-timeline: view();
+    pointer-events: none;
 }
 
 #info-about-me-indicator {
@@ -381,6 +417,7 @@ body {
     top: 12.5%;
     left: 5%;
     animation: wobble 3s ease-in-out infinite;
+    pointer-events: none;
 }
 
 #info-technologies-indicator {
@@ -393,6 +430,7 @@ body {
     top: 68%;
     left: 5%;
     animation: wobble 3s ease-in-out infinite;
+    pointer-events: none;
 }
 
 @keyframes spin {

@@ -14,8 +14,9 @@ const pfp = document.getElementById("info-pfp");
 const topBar = document.getElementById("top-bar");
 const mainRotator = document.getElementById('main-bg-image-blur');
 const clickGif = document.getElementById("click-effect");
-const container = document.getElementById("info-technologies-container");
+const techContainer = document.getElementById("info-technologies-container");
 const tooltip = document.getElementById("info-tooltip");
+const infoBgContainer = document.getElementById("info-bg");
 
 const delayFactor = 0.15;
 const amplitude = 5;
@@ -80,6 +81,12 @@ cursorChangeImage(mainSubtext, "assets/cursor_circle_red.png");
 cursorChangeImage(mainDesc, "assets/cursor_circle_red.png");
 cursorChangeImage(pfpWrapper, "assets/cursor_circle_blue.png");
 
+for (let i = 0; i < 100; i++) {
+  const square = document.createElement("div");
+  square.classList.add("info-bg-squares");
+  infoBgContainer.appendChild(square);
+}
+
 pfpWrapper.addEventListener("mouseenter", () => {
     pfp.style.opacity = "0";
     setTimeout(() => {
@@ -99,7 +106,7 @@ pfpWrapper.addEventListener("mouseleave", () => {
     }, 150);
 });
 
-container.querySelectorAll("img").forEach(img => {
+techContainer.querySelectorAll("img").forEach(img => {
   img.addEventListener("mouseenter", () => {
     tooltip.textContent = img.alt;
     tooltip.style.opacity = "1";
@@ -115,4 +122,29 @@ container.querySelectorAll("img").forEach(img => {
   img.addEventListener("mouseleave", () => {
     tooltip.style.opacity = "0";
   });
+});
+
+const infoBgSquares = document.querySelectorAll(".info-bg-squares");
+infoBgSquares.forEach(square => {
+    let animating = false;
+    
+    square.addEventListener("mouseenter", () => {
+        if (animating) return;
+        animating = true;
+
+        square.classList.add("square-hover");
+
+        setTimeout(() => {
+            animating = false;
+            if (!square.matches(":hover")) {
+                square.classList.remove("square-hover");
+            }
+        }, 300);
+    });
+    
+    square.addEventListener("mouseleave", () => {
+        if (!animating) {
+            square.classList.remove("square-hover");
+        }
+    });
 });
