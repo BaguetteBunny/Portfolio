@@ -81,7 +81,7 @@ cursorChangeImage(mainSubtext, "assets/cursor_circle_red.png");
 cursorChangeImage(mainDesc, "assets/cursor_circle_red.png");
 cursorChangeImage(pfpWrapper, "assets/cursor_circle_blue.png");
 
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 200; i++) {
   const square = document.createElement("div");
   square.classList.add("info-bg-squares");
   infoBgContainer.appendChild(square);
