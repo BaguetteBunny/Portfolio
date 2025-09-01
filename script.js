@@ -113,9 +113,9 @@ techContainer.querySelectorAll("img").forEach(img => {
   });
 
   img.addEventListener("mousemove", (e) => {
-    tooltip.style.top = e.clientY - 20 + "px";
     const rect = tooltip.getBoundingClientRect();
-    tooltip.style.left = (e.clientX - rect.width / 2) + "px";
+    tooltip.style.top = e.pageY/2 - 65  + "px";
+    tooltip.style.left = (e.pageX - rect.width / 2) + "px";
   });
 
 
