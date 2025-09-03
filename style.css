@@ -443,17 +443,41 @@ body {
     background-color: rgba(22, 22, 22, 0);
 }
 
-#experience-bg-wrapper {
+#experience-wrapper {
     position: absolute;
-    width: 80vw;
+    width: 90vw;
     height: 80vh;
     left: 50%;
-    transform: translate(-50%, 16%);
+    transform: translate(-50%, 14%);
     z-index: -2;
-    background-color: rgb(35, 35, 35);
-    border: 2px solid rgb(35, 35, 35);
-    animation: appear ease-in-out;
+    background-color: rgb(16, 16, 16);
+    border: 2px solid rgb(16, 16, 16);
+    animation: appear ease-out;
+    animation-timeline: view();
+    pointer-events: auto;
     border-radius: 50px;
+}
+
+.dev-project {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 50%;
+    top: 300%;
+    transform: translate(-50%);
+    z-index: -2;
+    background-color: rgb(255, 0, 0);
+}
+
+.art-project {
+    position: absolute;
+    width: 100vw;
+    height: 200vh;
+    left: 50%;
+    top: 400%;
+    transform: translate(-50%);
+    z-index: -2;
+    background-color: rgb(60, 0, 255);
 }
 
 @keyframes spin {
