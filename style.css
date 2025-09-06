@@ -444,18 +444,39 @@ body {
 }
 
 #experience-wrapper {
-    position: absolute;
     width: 90vw;
-    height: 80vh;
-    left: 50%;
-    transform: translate(-50%, 14%);
-    z-index: -2;
-    background-color: rgb(16, 16, 16);
-    border: 2px solid rgb(16, 16, 16);
+    height: 90vh;
+    border: 3px solid #333;
+    border-radius: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-type: x mandatory;
+    background: #222;
+    margin: auto;
+    margin-top: 20px;
+    padding: 50px;
     animation: appear-experience ease-in-out;
     animation-timeline: view();
-    pointer-events: auto;
-    border-radius: 50px;
+}
+
+.experience-box {
+    flex: 0 0 500px;
+    height: 100%;
+    background: #e0e0e0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    scroll-snap-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 
 .dev-project {
