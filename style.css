@@ -452,7 +452,7 @@ body {
     z-index: -2;
     background-color: rgb(16, 16, 16);
     border: 2px solid rgb(16, 16, 16);
-    animation: appear ease-out;
+    animation: appear-experience ease-in-out;
     animation-timeline: view();
     pointer-events: auto;
     border-radius: 50px;
@@ -489,6 +489,12 @@ body {
   0%   { opacity: 0; }
   25%  { opacity: 0; }
   75% { opacity: 1; }
+}
+
+@keyframes appear-experience {
+  0%   { opacity: 0; }
+  10%  { opacity: 0; }
+  50% { opacity: 1; }
 }
 
 @keyframes appear-about-me {
