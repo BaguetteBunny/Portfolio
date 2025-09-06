@@ -17,6 +17,7 @@ const clickGif = document.getElementById("click-effect");
 const techContainer = document.getElementById("info-technologies-container");
 const tooltip = document.getElementById("info-tooltip");
 const infoBgContainer = document.getElementById("info-bg");
+const experienceWrapper = document.getElementById("experience-wrapper");
 
 const delayFactor = 0.15;
 const amplitude = 5;
@@ -106,6 +107,7 @@ pfpWrapper.addEventListener("mouseleave", () => {
     }, 150);
 });
 
+
 techContainer.querySelectorAll("img").forEach(img => {
   img.addEventListener("mouseenter", () => {
     tooltip.textContent = img.alt;
@@ -147,4 +149,9 @@ infoBgSquares.forEach(square => {
             square.classList.remove("square-hover");
         }
     });
+});
+
+experienceWrapper.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    experienceWrapper.scrollTo({left: experienceWrapper.scrollLeft + evt.deltaY * 10, behavior: "smooth"});
 });
