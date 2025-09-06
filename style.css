@@ -479,6 +479,32 @@ body {
     margin-right: 500px;
 }
 
+#experience-button-left,
+#experience-button-right {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1000;
+}
+
+#experience-button-left {
+    left: 100px;
+}
+
+#experience-button-right {
+    right: 100px;
+}
+
 .dev-project {
     position: absolute;
     width: 100vw;

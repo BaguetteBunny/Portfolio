@@ -18,6 +18,8 @@ const techContainer = document.getElementById("info-technologies-container");
 const tooltip = document.getElementById("info-tooltip");
 const infoBgContainer = document.getElementById("info-bg");
 const experienceWrapper = document.getElementById("experience-wrapper");
+const experienceButtonLeft = document.getElementById("experience-button-left");
+const experienceButtonRight = document.getElementById("experience-button-right");
 
 const delayFactor = 0.15;
 const amplitude = 5;
@@ -149,4 +151,12 @@ infoBgSquares.forEach(square => {
             square.classList.remove("square-hover");
         }
     });
+});
+
+experienceButtonLeft.addEventListener("click", () => {
+  experienceWrapper.scrollBy({ left: -500, behavior: "smooth" });
+});
+
+experienceButtonRight.addEventListener("click", () => {
+  experienceWrapper.scrollBy({ left: 500, behavior: "smooth" });
 });
