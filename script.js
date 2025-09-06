@@ -150,8 +150,3 @@ infoBgSquares.forEach(square => {
         }
     });
 });
-
-experienceWrapper.addEventListener("wheel", (evt) => {
-    evt.preventDefault();
-    experienceWrapper.scrollTo({left: experienceWrapper.scrollLeft + evt.deltaY * 10, behavior: "smooth"});
-});
