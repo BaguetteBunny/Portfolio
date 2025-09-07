@@ -85,6 +85,9 @@ cursorChangeImage(mainText, "assets/cursor_circle_blue.png");
 cursorChangeImage(mainSubtext, "assets/cursor_circle_red.png");
 cursorChangeImage(mainDesc, "assets/cursor_circle_red.png");
 cursorChangeImage(pfpWrapper, "assets/cursor_circle_blue.png");
+cursorChangeImage(experienceButtonRight, "assets/cursor_circle.png");
+cursorChangeImage(experienceButtonLeft, "assets/cursor_circle.png");
+
 
 for (let i = 0; i < 100; i++) {
   const square = document.createElement("div");
@@ -113,21 +116,21 @@ pfpWrapper.addEventListener("mouseleave", () => {
 
 
 techContainer.querySelectorAll("img").forEach(img => {
-  img.addEventListener("mouseenter", () => {
-    tooltip.textContent = img.alt;
-    tooltip.style.opacity = "1";
-  });
+    img.addEventListener("mouseenter", () => {
+        tooltip.textContent = img.alt;
+        tooltip.style.opacity = "1";
+    });
 
-  img.addEventListener("mousemove", (e) => {
-    const rect = tooltip.getBoundingClientRect();
-    tooltip.style.top = e.pageY/2 - 65  + "px";
-    tooltip.style.left = (e.pageX - rect.width / 2) + "px";
-  });
+    img.addEventListener("mousemove", (e) => {
+        const rect = tooltip.getBoundingClientRect();
+        tooltip.style.top = e.pageY/2 - 65  + "px";
+        tooltip.style.left = (e.pageX - rect.width / 2) + "px";
+    });
 
 
-  img.addEventListener("mouseleave", () => {
-    tooltip.style.opacity = "0";
-  });
+    img.addEventListener("mouseleave", () => {
+        tooltip.style.opacity = "0";
+    });
 });
 
 const infoBgSquares = document.querySelectorAll(".info-bg-squares");
