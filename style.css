@@ -564,6 +564,7 @@ body {
     font-size: 2rem;
     user-select: none;
     z-index: 1000;
+    transition: background 0.3s;
 }
 
 #experience-button-left {
@@ -574,6 +575,7 @@ body {
    content: url(assets/left.png);
    margin: auto;
    opacity: 0.5;
+   transition: transform 0.3s;
 }
 
 #experience-button-right {
@@ -584,6 +586,17 @@ body {
    content: url(assets/right.png);
    margin: auto;
    opacity: 0.5;
+   transition: transform 0.3s;
+}
+
+#experience-button-left:hover,
+#experience-button-right:hover {
+    background: rgba(255, 255, 255, 0.758);
+}
+
+#experience-button-left:hover::before, 
+#experience-button-right:hover::before {
+    transform: scale(0.8);
 }
 
 #dev-project {
