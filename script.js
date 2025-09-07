@@ -20,6 +20,8 @@ const infoBgContainer = document.getElementById("info-bg");
 const experienceWrapper = document.getElementById("experience-wrapper");
 const experienceButtonLeft = document.getElementById("experience-button-left");
 const experienceButtonRight = document.getElementById("experience-button-right");
+const sections = document.querySelectorAll("section");
+const sideBoxes = document.querySelectorAll(".side-box");
 
 const delayFactor = 0.15;
 const amplitude = 5;
@@ -176,5 +178,21 @@ document.querySelectorAll(".side-box").forEach(box => {
             window.scrollTo({top: rect.top + scrollTop, behavior: "smooth"});
         }
 
+    });
+});
+
+window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY;
+    const vh = window.innerHeight;
+    const offset = vh * -0.2;
+
+    sections.forEach((sections, i) => {
+        const start = i * vh + offset;
+        const end = (i + 1) * vh + offset;
+
+        if (scrollPos >= start && scrollPos < end) {
+            sideBoxes.forEach(b => b.classList.remove("active"));
+            sideBoxes[i].classList.add("active");
+        }
     });
 });

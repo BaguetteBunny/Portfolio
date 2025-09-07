@@ -48,7 +48,7 @@ html {
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 75px;
+    gap: 10px;
     z-index: 1000;
     mix-blend-mode: exclusion;
 }
@@ -67,12 +67,30 @@ html {
     font-family: pixel;
     font-size: 20px;
     text-align: center;
+    text-decoration: underline none;
 }
 
 .side-box:hover {
     color: #ff0000;
     transform: scale(1.05);
     opacity: 0.8;
+}
+
+.side-box.active {
+    text-decoration: underline dotted;
+}
+
+.side-dot {
+    width: 5px;
+    height: 5px;
+    background: rgb(32, 32, 32);
+    border-radius: 50%;
+    transition: background 0.2s;
+    margin-left: 57px;
+}
+
+.dot.active {
+    background: #fff;
 }
 
 #custom-cursor {
