@@ -114,7 +114,7 @@ html {
     pointer-events: none;
     z-index: 9999;
     mix-blend-mode: exclusion;
-    transition: opacity 0.1s ease, transform 0.1s ease;
+    transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 body {
