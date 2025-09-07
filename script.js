@@ -160,3 +160,21 @@ experienceButtonLeft.addEventListener("click", () => {
 experienceButtonRight.addEventListener("click", () => {
   experienceWrapper.scrollBy({ left: 500, behavior: "smooth" });
 });
+
+document.querySelectorAll(".side-box").forEach(box => {
+    box.addEventListener("click", () => {
+        const targetId = box.getAttribute("data-target");
+        const target = document.getElementById(targetId);
+        const rect = target.getBoundingClientRect();
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (targetId == "main") {
+            window.scrollTo({top: rect.top + scrollTop - 100, behavior: "smooth"});
+        } else if (targetId == "info") {
+            window.scrollTo({top: rect.top + scrollTop + 230, behavior: "smooth"});
+        } else {
+            window.scrollTo({top: rect.top + scrollTop, behavior: "smooth"});
+        }
+
+    });
+});

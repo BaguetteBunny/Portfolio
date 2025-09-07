@@ -1,5 +1,6 @@
 @font-face { font-family: pixel; src: url('font/monogram.ttf');}
 @font-face { font-family: heroeau; src: url('font/HEROEAU.otf');}
+@font-face { font-family: akira; src: url('font/akira.otf');}
 
 * {
     cursor: none;
@@ -38,6 +39,40 @@ html {
     margin-right: 10px;
     width: auto;
     height: 40px;
+}
+
+#side-bar {
+    position: fixed;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    z-index: 1000;
+    mix-blend-mode: exclusion;
+}
+
+.side-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 50px;
+    color: rgb(143, 143, 143);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 0.3s, transform 0.2s, opacity 0.3s;
+    font-family: pixel;
+    font-size: 20px;
+    text-align: center;
+}
+
+.side-box:hover {
+    color: #ff0000;
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 #custom-cursor {
@@ -432,7 +467,7 @@ body {
     pointer-events: none;
 }
 
-.experience {
+#experience {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -506,7 +541,7 @@ body {
     right: 200px;
 }
 
-.dev-project {
+#dev-project {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -517,7 +552,7 @@ body {
     background-color: rgb(255, 0, 0);
 }
 
-.art-project {
+#art-project {
     position: absolute;
     width: 100vw;
     height: 200vh;
