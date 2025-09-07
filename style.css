@@ -570,8 +570,20 @@ body {
     left: 100px;
 }
 
+#experience-button-left::before {
+   content: url(assets/left.png);
+   margin: auto;
+   opacity: 0.5;
+}
+
 #experience-button-right {
     right: 200px;
+}
+
+#experience-button-right::before {
+   content: url(assets/right.png);
+   margin: auto;
+   opacity: 0.5;
 }
 
 #dev-project {
