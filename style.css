@@ -51,6 +51,7 @@ html {
     gap: 10px;
     z-index: 1000;
     mix-blend-mode: exclusion;
+    pointer-events: none;
 }
 
 .side-box {
@@ -69,6 +70,7 @@ html {
     font-size: 20px;
     text-align: center;
     text-decoration: underline none;
+    pointer-events: auto;
 }
 
 .side-box::after {
