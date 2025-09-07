@@ -445,7 +445,7 @@ body {
 
 #experience-wrapper {
     width: 90vw;
-    height: 90vh;
+    height: 80vh;
     border: 3px solid #333;
     border-radius: 16px;
     overflow-x: auto;
@@ -458,10 +458,12 @@ body {
     scroll-snap-type: x mandatory;
     background: #222;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 75px;
+    margin-left: 20px;
     padding: 50px;
     animation: appear-experience ease-in-out;
     animation-timeline: view();
+    overflow-x: hidden;
 }
 
 .experience-box {
@@ -502,7 +504,7 @@ body {
 }
 
 #experience-button-right {
-    right: 100px;
+    right: 200px;
 }
 
 .dev-project {
