@@ -527,6 +527,8 @@ body {
     scroll-snap-type: x mandatory;
     background: #222;
     margin: 67px 166px 0 auto;
+    animation: appear-experience ease-in-out;
+    animation-timeline: view();
 }
 
 #experience-wrapper-bg {
