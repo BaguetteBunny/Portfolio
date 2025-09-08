@@ -559,6 +559,23 @@ body {
     color: white;
 }
 
+#experience-pukunui-internship::after {
+    content: '';
+    position: absolute;
+    left: 44.5%;
+    bottom: 71%;
+    width: 0;
+    height: 35px;
+    z-index: 2;
+    mix-blend-mode: darken;
+    background-color: rgb(255, 96, 96);
+    transition: width 0.3s ease-in-out;
+}
+
+#experience-pukunui-internship:hover::after {
+    width: 15%;
+}
+
 #experience-title {
     grid-area: title;
     text-align: center;
