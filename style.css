@@ -378,7 +378,8 @@ body {
     background-color: rgb(35, 35, 35);
     border: 2px solid rgb(35, 35, 35);
     border-radius: 20px;
-    animation: appear ease-in-out;
+    animation: appear-technologies ease-in-out;
+    animation-timeline: view();
     pointer-events: none;
 }
 
@@ -697,15 +698,18 @@ body {
 }
 
 @keyframes appear-about-me {
-  0%   { left: 0%; }
-  25%  { left: 30%; }
+  0%   { left: 10%; }
   90% { left: 35%; }
 }
 
+@keyframes appear-technologies {
+  0%   { left: 20%; opacity: 0;}
+  60% { left: 35%; opacity: 1;}
+}
+
 @keyframes appear-x {
-  0%   { top: -0%; }
-  25%  { top: -50%; }
-  90% { top: -70%; }
+  0%   { top: -35%; }
+  90% { top: -72%; }
 }
 
 @keyframes wobble {
