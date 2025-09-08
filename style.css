@@ -528,6 +528,10 @@ body {
     margin: 67px 166px 0 auto;
 }
 
+#experience-wrapper-bg {
+    z-index: -9;
+}
+
 .experience-box {
     flex: 0 0 500px;
     display: grid;
@@ -559,6 +563,7 @@ body {
     text-align: center;
     font-size: 50px;
     margin: 0;
+    text-shadow: 0 0 50px #969696;
 }
 
 #experience-location {
@@ -584,6 +589,7 @@ body {
     align-self: center;
     font-size: 50px;
     margin: 0;
+    animation: wobble 5s ease-in-out infinite;
 }
 
 #experience-image {
